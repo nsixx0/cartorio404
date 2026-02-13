@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 Service Error</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="site-title">404 — Resource Unavailable</h1>
+      <p class="sub-title">Service relocated</p>
+    </div>
+
+    <div class="content">
+      <div class="panel">
+        <p>The requested service endpoint has been moved.</p>
+        <p>You will be redirected shortly. If not, continue manually:</p>
+        <p><a href="preemptive.html">Continue to relocated service</a></p>
+      </div>
+    </div>
+
+    <div class="footer">Fictional website created for a horror story. No real services.</div>
+  </div>
+
+  <script>
+    setTimeout(function () {
+      window.location.href = 'preemptive.html';
+    }, 2000);
+  </script>
+</body>
+</html>

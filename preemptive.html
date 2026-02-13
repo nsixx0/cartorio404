@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preemptive Death Registration</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="site-title">Preemptive Death Registration</h1>
+      <p class="sub-title">Automated Future Record Intake</p>
+    </div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="protocol.html">Protocol Stage 1</a></li>
+          <li><a href="witnesses.html">Witnesses</a></li>
+          <li><a href="fees.html">Fees</a></li>
+        </ul>
+        <div class="status-box">
+          <div><strong>Countdown:</strong> <span id="countdown">05:00</span></div>
+          <div id="connectionStatus" class="small-note">Connection status: nominal.</div>
+          <p><button id="disconnectBtn" type="button">Disconnect</button></p>
+        </div>
+      </aside>
+
+      <main class="content">
+        <div id="processBanner" class="banner-alert hidden">PROCESS INITIATED BY THE SYSTEM.</div>
+
+        <div class="panel">
+          <p><span class="badge">Protocol</span> <strong id="protocolMirror">CLRK-0000-0000</strong></p>
+          <form>
+            <label>Full Name</label>
+            <input id="fullName" type="text" />
+            <label>Address</label>
+            <input id="address" type="text" />
+            <label>ID Number</label>
+            <input id="idNumber" type="text" />
+            <label>Date of Birth</label>
+            <input id="dob" type="text" />
+            <label>Cause of Death</label>
+            <input id="causeOfDeath" type="text" />
+            <label>Date of Death</label>
+            <input id="dateOfDeath" type="text" />
+            <p><button id="proceedBtn" type="button">Proceed</button></p>
+          </form>
+        </div>
+
+        <div id="closureMessage" class="banner-alert hidden">REPORT FOR REGISTRATION COMPLETION.</div>
+        <p><a id="emailLink" class="hidden" href="email.html">View Confirmation Email</a></p>
+      </main>
+    </div>
+
+    <div class="footer">Fictional website created for a horror story. No real services.</div>
+  </div>
+
+  <div id="overlay" class="overlay hidden">
+    <div class="overlay-box">
+      <h3>Validation Notice</h3>
+      <p id="overlayStatus">For final validation, attach a photo of what is behind you.</p>
+      <p><button id="closeOverlayBtn" type="button">Acknowledge</button></p>
+    </div>
+  </div>
+
+  <script src="assets/mock-data.js"></script>
+  <script src="assets/app.js"></script>
+  <script src="assets/preemptive.js"></script>
+</body>
+</html>

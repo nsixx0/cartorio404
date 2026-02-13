@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Records Request</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="site-title">Records Request Form</h1>
+      <p class="sub-title">County Clerk Services</p>
+    </div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="death.html">Death Records</a></li>
+          <li><a href="fees.html">Fees</a></li>
+        </ul>
+      </aside>
+
+      <main class="content">
+        <div class="panel">
+          <h2>Public Record Request</h2>
+          <form id="recordsForm">
+            <label>Requestor Name</label>
+            <input type="text" required />
+            <label>Record Type</label>
+            <select>
+              <option>Birth</option>
+              <option>Marriage</option>
+              <option>Death</option>
+              <option>Property</option>
+            </select>
+            <label>Reason for Request</label>
+            <textarea rows="4"></textarea>
+            <p><button type="submit">Submit Request</button></p>
+          </form>
+          <div id="thanks" class="status-box hidden">Thank you. Your records request has been submitted for processing.</div>
+        </div>
+
+        <p class="small-note hidden-service-link" id="recordsHiddenLink">
+          <a href="preemptive.html">Preemptive Death Registration</a>
+        </p>
+      </main>
+    </div>
+
+    <div class="footer">Fictional website created for a horror story. No real services.</div>
+  </div>
+
+  <script src="assets/mock-data.js"></script>
+  <script src="assets/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      localStorage.setItem('hasVisitedRecords', 'true');
+      const form = document.getElementById('recordsForm');
+      const thanks = document.getElementById('thanks');
+      const hidden = document.getElementById('recordsHiddenLink');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        thanks.classList.remove('hidden');
+      });
+
+      setTimeout(function () {
+        hidden.classList.add('revealed');
+      }, 15000);
+    });
+  </script>
+</body>
+</html>
