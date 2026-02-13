@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fees</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="site-title">Fees and Payments</h1>
+      <p class="sub-title">Step 3 / 4 — Payment Classification</p>
+    </div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <ul class="nav-list">
+          <li><a href="protocol.html">Protocol</a></li>
+          <li><a href="witnesses.html">Witnesses</a></li>
+          <li><a href="preemptive.html">Return to Intake</a></li>
+        </ul>
+      </aside>
+
+      <main class="content">
+        <div class="panel">
+          <h2>Fee Schedule</h2>
+          <table class="basic">
+            <tr><th>Item</th><th>Fee</th></tr>
+            <tr><td>Pre-Record Processing</td><td>$88.00</td></tr>
+            <tr><td>Witness Routing</td><td>$16.00</td></tr>
+            <tr><td>Validation Indexing</td><td>$34.00</td></tr>
+          </table>
+          <p><strong>Non-refundable.</strong></p>
+          <p>Protocol: <span id="protocolId">CLRK-0000-0000</span></p>
+          <p>Shared timer: <span data-countdown>05:00</span></p>
+        </div>
+      </main>
+    </div>
+
+    <div class="footer">Fictional website created for a horror story. No real services.</div>
+  </div>
+
+  <script src="assets/mock-data.js"></script>
+  <script src="assets/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('protocolId').textContent = window.Cartorio404Data.getProtocolId();
+    });
+  </script>
+</body>
+</html>

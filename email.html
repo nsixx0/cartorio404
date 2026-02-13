@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corporate Mail Portal</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="site-title">County Internal Webmail</h1>
+      <p class="sub-title">Inbox — Secure Government Messaging (Legacy)</p>
+    </div>
+
+    <div class="content">
+      <div class="mail-layout panel">
+        <div class="mail-list">
+          <div id="messageRow" class="mail-row">
+            <div><strong>Subject:</strong> Confirmation — Death Registration (Pre-Record)</div>
+            <div><strong>Sender:</strong> county-services@fictional-county.gov</div>
+            <div><strong>Date:</strong> Immediate Delivery</div>
+          </div>
+        </div>
+        <div class="mail-view">
+          <div id="messagePanel" class="hidden">
+            <p><strong>To:</strong> <span id="mailCitizenName">Citizen</span></p>
+            <p><strong>Reference:</strong> <span id="mailProtocol">CLRK-0000-0000</span></p>
+            <p>Your pre-record death registration has entered active validation and archival pre-indexing.</p>
+            <p>Status: <strong>DECEASED — PRE-REGISTRATION IN PROGRESS</strong></p>
+            <p><button id="openAttachment" type="button">Open Attachment</button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">Fictional website created for a horror story. No real services.</div>
+  </div>
+
+  <script src="assets/mock-data.js"></script>
+  <script src="assets/app.js"></script>
+  <script src="assets/email.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Official Record Document</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body style="background:#b7b7b7;">
+  <div class="pdf">
+    <h2>County Clerk Office — Official Record</h2>
+    <hr />
+    <p><strong>Name:</strong> <span id="docName">Citizen Name</span></p>
+    <p><strong>Status:</strong> DECEASED — PRE-REGISTRATION IN PROGRESS</p>
+    <p><strong>Date:</strong> TOMORROW</p>
+    <p><strong>Protocol:</strong> <span id="docProtocol">CLRK-0000-0000</span></p>
+
+    <div class="photo-placeholder"></div>
+    <p>Validation image attached.</p>
+  </div>
+
+  <script src="assets/mock-data.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('docName').textContent = window.Cartorio404Data.citizen.fullName;
+      document.getElementById('docProtocol').textContent = window.Cartorio404Data.getProtocolId();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Witnesses</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="site-title">Witness Declaration</h1>
+      <p class="sub-title">Step 2 / 4 — System Witness Draft</p>
+    </div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <ul class="nav-list">
+          <li><a href="protocol.html">Step 1</a></li>
+          <li><a href="fees.html">Step 3</a></li>
+          <li><a href="preemptive.html">Return to Intake</a></li>
+        </ul>
+      </aside>
+
+      <main class="content">
+        <div class="panel">
+          <p><strong>Auto-filled by system.</strong></p>
+          <table class="basic">
+            <tr><th>Witness</th><th>Identifier</th><th>Status</th></tr>
+            <tr><td>Witness A</td><td>SYS-WA-884</td><td>Verified</td></tr>
+            <tr><td>Witness B</td><td>SYS-WB-197</td><td>Verified</td></tr>
+          </table>
+          <p>Linked protocol: <span id="protocolId">CLRK-0000-0000</span></p>
+          <p>Countdown mirror: <span data-countdown>05:00</span></p>
+        </div>
+      </main>
+    </div>
+
+    <div class="footer">Fictional website created for a horror story. No real services.</div>
+  </div>
+
+  <script src="assets/mock-data.js"></script>
+  <script src="assets/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('protocolId').textContent = window.Cartorio404Data.getProtocolId();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protocol Stage 1</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="site-title">Protocol Processing</h1>
+      <p class="sub-title">Step 1 / 4 — Intake Acknowledgment</p>
+    </div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <ul class="nav-list">
+          <li><a href="preemptive.html">Return to Intake</a></li>
+          <li><a href="witnesses.html">Step 2 — Witnesses</a></li>
+          <li><a href="fees.html">Step 3 — Fees</a></li>
+        </ul>
+      </aside>
+
+      <main class="content">
+        <div class="banner-alert">ONLINE SERVICE ONLY</div>
+        <div class="panel">
+          <h2>Protocol Number: <span id="protocolId">CLRK-0000-0000</span></h2>
+          <p>Current synchronized countdown: <strong data-countdown>05:00</strong></p>
+          <p>Office Address: 77 Archive Annex, Basement Level, Grayford, WB.</p>
+          <p class="small-note">In-person desk unavailable until further notice.</p>
+        </div>
+        <div class="status-box hidden" data-on-expire>
+          Countdown completed. Final notice issued.
+        </div>
+      </main>
+    </div>
+
+    <div class="footer">Fictional website created for a horror story. No real services.</div>
+  </div>
+
+  <script src="assets/mock-data.js"></script>
+  <script src="assets/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('protocolId').textContent = window.Cartorio404Data.getProtocolId();
+    });
+  </script>
+</body>
+</html>
